@@ -1,0 +1,19 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: calc(33% - 10px);
+    border-radius: 5px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .gallery img {
+        width: calc(50% - 10px); /* Two images per row on small screens */
+    }
+}
