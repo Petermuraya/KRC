@@ -1,0 +1,110 @@
+/* General styles for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light background color */
+  color: #343a40; /* Dark text color */
+}
+
+/* Header styles */
+header {
+  background-color: #dc3545; /* Bootstrap Red */
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40; /* Dark background for footer */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Button styles */
+button {
+  padding: 10px;
+  background-color: #dc3545; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}
+
+/* Gallery styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: calc(33% - 10px); /* Adjust based on your design */
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .gallery img {
+      width: calc(50% - 10px); /* Two images per row on small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  nav ul li {
+      display: block; /* Stack nav items on small screens */
+      margin: 5px 0;
+  }
+}
