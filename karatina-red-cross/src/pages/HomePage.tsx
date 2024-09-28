@@ -1,12 +1,18 @@
 // src/pages/Home.tsx
 import React from 'react';
 import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import KeyFeatures from '../components/KeyFeatures';
 
 const Home: React.FC = () => {
   return (
     <div className="home-page">
       <Navbar />
-
+      <div>
+      <HeroSection />
+      <KeyFeatures />
+      {/* You can add other sections below like highlights, news, etc. */}
+    </div>
       {/* Hero Section */}
       <section className="hero-section bg-red-600 text-white py-20 text-center">
         <h1 className="text-5xl font-bold">Welcome to Karatina University Red Cross Chapter</h1>
