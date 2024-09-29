@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -9,9 +8,17 @@ const Navbar: React.FC = () => {
     <nav className="bg-red-600 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
+          {/* Logo Section */}
           <div className="flex">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold">Red Cross Chapter</h1>
+              {/* Add your logo here */}
+              <Link to="/">
+                <img
+                  src="/src/assets/photos/logo red cross.png" // Replace this with the actual path to your logo
+                  alt="Red Cross Logo"
+                  className="h-10 w-auto"
+                />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex space-x-4">
               <Link to="/" className="text-white hover:bg-red-700 px-3 py-2 rounded-md text-sm font-medium">
@@ -34,6 +41,8 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
           </div>
+          
+          {/* Login/Register Section */}
           <div className="hidden sm:ml-6 sm:flex items-center">
             <Link to="/login" className="text-white hover:bg-red-700 px-3 py-2 rounded-md text-sm font-medium">
               Login
@@ -42,6 +51,8 @@ const Navbar: React.FC = () => {
               Register
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
           <div className="-mr-2 flex sm:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

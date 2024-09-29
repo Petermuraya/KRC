@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-60"
-        style={{ backgroundImage: "url(' https://github.com/Petermuraya/KRC/blob/main/logo%20red%20cross.png ')" }} // Add your image here
+        style={{ backgroundImage: "url('/src/assets/photos/donation.jpg')" }} // Add your image here
       ></div>
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay */}
     </div>

@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +6,8 @@ const Footer: React.FC = () => {
     <footer className="bg-red-600 text-white py-8 mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* About Us Section */}
           <div>
             <h2 className="text-lg font-bold mb-2">About Us</h2>
             <p className="mb-4">
@@ -14,26 +15,20 @@ const Footer: React.FC = () => {
             </p>
             <Link to="/about" className="text-white hover:underline">Learn More</Link>
           </div>
+          
+          {/* Quick Links Section */}
           <div>
             <h2 className="text-lg font-bold mb-2">Quick Links</h2>
             <ul className="space-y-2">
-              <li>
-                <Link to="/" className="hover:underline">Home</Link>
-              </li>
-              <li>
-                <Link to="/events" className="hover:underline">Events</Link>
-              </li>
-              <li>
-                <Link to="/membership" className="hover:underline">Membership</Link>
-              </li>
-              <li>
-                <Link to="/get-involved" className="hover:underline">Get Involved</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:underline">Contact</Link>
-              </li>
+              <li><Link to="/" className="hover:underline">Home</Link></li>
+              <li><Link to="/events" className="hover:underline">Events</Link></li>
+              <li><Link to="/membership" className="hover:underline">Membership</Link></li>
+              <li><Link to="/get-involved" className="hover:underline">Get Involved</Link></li>
+              <li><Link to="/contact" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
+
+          {/* Social Media Links */}
           <div>
             <h2 className="text-lg font-bold mb-2">Connect With Us</h2>
             <ul className="flex space-x-4">
@@ -59,6 +54,8 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+
+          {/* Newsletter Subscription */}
           <div>
             <h2 className="text-lg font-bold mb-2">Newsletter Subscription</h2>
             <p className="mb-4">
@@ -78,6 +75,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* Copyright Section */}
       <div className="border-t border-red-700 mt-8 pt-4 text-center">
         <p>&copy; {new Date().getFullYear()} Red Cross Chapter. All rights reserved.</p>
       </div>
