@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 pt-16 pb-20 sm:pb-24 lg:pt-32 lg:pb-28">
           <h1 className="text-center text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Join the Red Cross Chapter
+            Join Kenya KARU Red Cross Chapter
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-center text-lg leading-6 text-gray-200">
             Become part of a global movement dedicated to helping others in need.
@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-60"
-        style={{ backgroundImage: "url('  ')" }} // Add your image here
+        style={{ backgroundImage: "url(' https://github.com/Petermuraya/KRC/blob/main/logo%20red%20cross.png ')" }} // Add your image here
       ></div>
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay */}
     </div>
