@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-red-600 text-white py-8 mt-10">
+    <footer className="bg-black text-white py-8 mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           
@@ -13,18 +13,18 @@ const Footer: React.FC = () => {
             <p className="mb-4">
               We are committed to helping our community and responding to emergencies while adhering to the principles of the Red Cross.
             </p>
-            <Link to="/about" className="text-white hover:underline">Learn More</Link>
+            <Link to="/about" className="text-white hover:text-red-600 hover:underline">Learn More</Link>
           </div>
           
           {/* Quick Links Section */}
           <div>
             <h2 className="text-lg font-bold mb-2">Quick Links</h2>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:underline">Home</Link></li>
-              <li><Link to="/events" className="hover:underline">Events</Link></li>
-              <li><Link to="/membership" className="hover:underline">Membership</Link></li>
-              <li><Link to="/get-involved" className="hover:underline">Get Involved</Link></li>
-              <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+              <li><Link to="/" className="hover:text-red-600 hover:underline">Home</Link></li>
+              <li><Link to="/events" className="hover:text-red-600 hover:underline">Events</Link></li>
+              <li><Link to="/membership" className="hover:text-red-600 hover:underline">Membership</Link></li>
+              <li><Link to="/get-involved" className="hover:text-red-600 hover:underline">Get Involved</Link></li>
+              <li><Link to="/contact" className="hover:text-red-600 hover:underline">Contact</Link></li>
             </ul>
           </div>
 
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 className="p-2 w-full mb-2 rounded-md text-black"
                 required
               />
-              <button type="submit" className="bg-white text-red-600 px-4 py-2 rounded-md font-semibold">
+              <button type="submit" className="bg-white text-red-600 px-4 py-2 rounded-md font-semibold hover:bg-red-600 hover:text-white">
                 Subscribe
               </button>
             </form>

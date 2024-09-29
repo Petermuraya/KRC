@@ -1,4 +1,3 @@
-// src/components/KeyFeatures.tsx
 import React from 'react';
 import { FaHandsHelping, FaAmbulance, FaPeopleArrows } from 'react-icons/fa';
 
@@ -18,6 +17,11 @@ const KeyFeatures: React.FC = () => {
       icon: <FaPeopleArrows className="w-12 h-12 text-red-600" />,
       title: "Community Support",
       description: "We support local communities by providing health and welfare services."
+    },
+    {
+      icon: <FaHandsHelping className="w-12 h-12 text-red-600" />, // You can change the icon if needed
+      title: "Special Programmes",
+      description: "Kenya Red Cross has special programmes that cater for special needs of vulnerable communities across the country."
     }
   ];
 

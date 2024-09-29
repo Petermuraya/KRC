@@ -1,13 +1,21 @@
 // src/components/Layout.tsx
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Layout: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      {/* Navbar should always be visible */}
       <Navbar />
-      <main className="flex-grow">{children}</main>
+
+      {/* Main content area where the pages (Home, About, etc.) will be displayed */}
+      <main className="flex-grow">
+        <Outlet /> {/* The current page will be rendered here */}
+      </main>
+
+      {/* Footer should always be visible */}
       <Footer />
     </div>
   );

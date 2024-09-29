@@ -1,7 +1,7 @@
 // src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout'; // The new Layout component
+import Layout from './components/Layout'; // The Layout component
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import MembersPage from './pages/MembersPage';
@@ -10,20 +10,21 @@ import ContactPage from './pages/ContactPage';
 import './App.css'; // Import your CSS styles
 
 const App: React.FC = () => {
-    return (
-        <Router>
-            <Layout>
-                <Routes>
-                    {/* Define all the routes for the application */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/members" element={<MembersPage />} />
-                    <Route path="/activities" element={<ActivitiesPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                </Routes>
-            </Layout>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        {/* Use Layout as a wrapper for all pages */}
+        <Route path="/" element={<Layout />}>
+          {/* Nested routes inside Layout */}
+          <Route index element={<HomePage />} /> {/* HomePage is the default route */}
+          <Route path="about" element={<AboutPage />} /> {/* AboutPage route */}
+          <Route path="members" element={<MembersPage />} /> {/* MembersPage route */}
+          <Route path="activities" element={<ActivitiesPage />} /> {/* ActivitiesPage route */}
+          <Route path="contact" element={<ContactPage />} /> {/* ContactPage route */}
+        </Route>
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
