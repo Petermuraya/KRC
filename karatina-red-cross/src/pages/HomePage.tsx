@@ -1,22 +1,34 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Import framer-motion
 import HeroSection from '../components/HeroSection';
 import KeyFeatures from '../components/KeyFeatures';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+
 const Home: React.FC = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 20 },
+  };
+
   return (
     <div className="home-page bg-white text-black">
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
-      <HeroSection />
+      <motion.div {...fadeInUp} transition={{ duration: 0.5 }}>
+        <HeroSection />
+      </motion.div>
 
       {/* Key Features Section */}
-      <KeyFeatures />
+      <motion.div {...fadeInUp} transition={{ duration: 0.5 }}>
+        <KeyFeatures />
+      </motion.div>
 
       {/* Principles Section */}
-      <section className="principles-section py-20 bg-white text-center">
+      <motion.section {...fadeInUp} transition={{ duration: 0.5 }} className="principles-section py-20 bg-white text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-black">Our Principles</h2>
         <p className="mt-4 text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
           We are guided by the fundamental principles of the Red Cross and Red Crescent Movement:
@@ -30,48 +42,48 @@ const Home: React.FC = () => {
           <li><strong>Unity:</strong> There can only be one Red Cross Society in any one country.</li>
           <li><strong>Universality:</strong> The Red Cross is a worldwide institution with equal status in all societies.</li>
         </ul>
-      </section>
+      </motion.section>
 
       {/* Activities Section */}
-      <section className="activities-section py-20 bg-gray-100">
+      <motion.section {...fadeInUp} transition={{ duration: 0.5 }} className="activities-section py-20 bg-gray-100">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-black">Our Key Activities</h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="activity bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow transform hover:scale-105">
+          <motion.div whileHover={{ scale: 1.05 }} className="activity bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
             <h3 className="text-2xl font-semibold text-black">Blood Drives</h3>
             <p className="mt-4 text-gray-700">Join our efforts in organizing life-saving blood donation campaigns.</p>
-          </div>
-          <div className="activity bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow transform hover:scale-105">
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} className="activity bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
             <h3 className="text-2xl font-semibold text-black">Community Service</h3>
             <p className="mt-4 text-gray-700">Get involved in supporting and uplifting local communities.</p>
-          </div>
-          <div className="activity bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow transform hover:scale-105">
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} className="activity bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
             <h3 className="text-2xl font-semibold text-black">Children's Home Visits</h3>
             <p className="mt-4 text-gray-700">Make a difference by participating in visits to children's homes.</p>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Testimonials Section */}
-      <section className="testimonials-section bg-white py-20">
+      <motion.section {...fadeInUp} transition={{ duration: 0.5 }} className="testimonials-section bg-white py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-black">What Our Volunteers Say</h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-lg mx-auto">
-          <div className="testimonial bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          <motion.div {...fadeInUp} transition={{ duration: 0.5 }} className="testimonial bg-gray-50 p-6 rounded-lg shadow-lg text-center">
             <p className="text-gray-700 italic">"Volunteering with the Red Cross has been life-changing. It's an incredible opportunity to help others."</p>
             <h4 className="mt-4 text-lg font-semibold text-black">- Sarah, Volunteer</h4>
-          </div>
-          <div className="testimonial bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          </motion.div>
+          <motion.div {...fadeInUp} transition={{ duration: 0.5 }} className="testimonial bg-gray-50 p-6 rounded-lg shadow-lg text-center">
             <p className="text-gray-700 italic">"I've met amazing people and made a real difference in my community."</p>
             <h4 className="mt-4 text-lg font-semibold text-black">- James, Volunteer</h4>
-          </div>
-          <div className="testimonial bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+          </motion.div>
+          <motion.div {...fadeInUp} transition={{ duration: 0.5 }} className="testimonial bg-gray-50 p-6 rounded-lg shadow-lg text-center">
             <p className="text-gray-700 italic">"The Red Cross gave me a platform to give back, and it's been an incredibly fulfilling experience."</p>
             <h4 className="mt-4 text-lg font-semibold text-black">- Emily, Volunteer</h4>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Join Us Section */}
-      <section className="join-us-section py-20 bg-red-600 text-center text-white">
+      <motion.section {...fadeInUp} transition={{ duration: 0.5 }} className="join-us-section py-20 bg-red-600 text-center text-white">
         <h2 className="text-4xl md:text-5xl font-bold">Join Us in Making a Difference</h2>
         <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
           Become a part of our mission to help those in need. Whether through volunteering or donating, you can make a big impact.
@@ -81,10 +93,10 @@ const Home: React.FC = () => {
             Join Now
           </a>
         </div>
-      </section>
+      </motion.section>
 
       {/* Upcoming Events Section */}
-      <section className="events-section bg-gray-100 py-20">
+      <motion.section {...fadeInUp} transition={{ duration: 0.5 }} className="events-section bg-gray-100 py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-black">Upcoming Events</h2>
         <div className="mt-8 flex flex-col items-center justify-center">
           <p className="text-lg md:text-xl text-gray-800">Stay tuned for upcoming events like blood drives, community outreach, and more.</p>
@@ -92,10 +104,10 @@ const Home: React.FC = () => {
             View Events
           </a>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer Section */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
