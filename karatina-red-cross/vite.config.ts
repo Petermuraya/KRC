@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 
-  base:"/KRC/karatina-red-cross",
+  base:"/codespace-didactic-giggle-vx7x4wvwrqgcw4qj/",
 })
