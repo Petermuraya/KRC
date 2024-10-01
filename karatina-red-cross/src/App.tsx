@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -25,6 +26,20 @@ const App: React.FC = () => {
       </Routes>
     </Router>
   );
+=======
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+const App: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    return (
+        <div>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </div>
+    );
+>>>>>>> 37377f57453bfcc9547a8f268dc16dbfa00616e2
 };
 
 export default App;
